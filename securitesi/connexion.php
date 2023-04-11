@@ -50,16 +50,16 @@ echo $erreur;
                     // On créer la session et on redirige sur index.php
                     header('Location: index.php');
                 } else {
-                    $erreur = "E-mail ou mot de passe incorrect";
+                    echo "E-mail ou mot de passe incorrect";
                 }
             } else {
-                $erreur = "E-mail ou mot de passe incorrect";
+                echo "E-mail ou mot de passe incorrect";
             }
         } else {
-            $erreur = "E-mail ou mot de passe incorrect";
+            echo "E-mail ou mot de passe incorrect";
         }
     } else {
-        $erreur = "Veuillez saisir votre e-mail et votre mot de passe";
+        echo "Veuillez saisir votre e-mail et votre mot de passe";
     }
     ?>
 </body>
