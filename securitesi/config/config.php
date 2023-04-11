@@ -5,5 +5,14 @@ $dbpass = "";
 $dbuser = "root";
 $dbip = "localhost";
 
+try
+{
 $bdd = new PDO("mysql:host=$dbip;dbname=$dbname;charset=utf8", $dbuser, $dbpass);
+}
+catch (Exception $e)
+{
+die('Erreur : ' . $e->getMessage());
+}
+
+
 ?>
