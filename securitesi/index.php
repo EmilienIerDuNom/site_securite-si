@@ -16,18 +16,24 @@ require("config/config.php");
     <fieldset>
         <h1>Bienvenue !</h1>
         <?php
+        if (isset($_SESSION['connecter'])) {
         if ($_SESSION['connecter'] == "connecter") {
             echo "<a href='deco.php'>Se déconnecter</a> ";
         } else {
+            echo " <br><a href='connexion.php'>Se connecter </a><br><br> ";
+            echo " <br><a href='inscription.php'>S'inscire </a><br> ";
+        }} else {
             echo " <br><a href='connexion.php'>Se connecter </a><br><br> ";
             echo " <br><a href='inscription.php'>S'inscire </a><br> ";
         }
         ?>
 
         <?php
+        if (isset($_SESSION['mail'])) {
         $check = $bdd->prepare('SELECT * FROM utilisateurs WHERE mail = ?');
         $check->execute(array($_SESSION['mail']));
-        $data = $check->fetch();
+        $data = $check->fetch();}
+        if (isset($data['permissions']) && isset($_SESSION['connecter'])) {
         if ($data['permissions'] === 1 && $_SESSION['connecter'] == "connecter") {
             echo "<a href='importer.php'>Ajouter un nouveau blog</a>";
             $data = $bdd->prepare('SELECT * FROM blog');
@@ -80,7 +86,7 @@ require("config/config.php");
 
                         <?php
                     }
-        }
+        }}
         ;
         ?>
 
