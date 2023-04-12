@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 12 avr. 2023 à 12:11
+-- Généré le : mer. 12 avr. 2023 à 15:39
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -34,13 +34,6 @@ CREATE TABLE `blog` (
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Déchargement des données de la table `blog`
---
-
-INSERT INTO `blog` (`titre`, `image`, `text`, `id`) VALUES
-('Test1 szxdecfrvtgbhnj,k ', '643680ef349c5.jpg', 'test12  ', 10);
-
 -- --------------------------------------------------------
 
 --
@@ -56,14 +49,6 @@ CREATE TABLE `utilisateurs` (
   `mdp` varchar(100) NOT NULL,
   `permissions` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Déchargement des données de la table `utilisateurs`
---
-
-INSERT INTO `utilisateurs` (`id`, `nom`, `prenom`, `tel`, `mail`, `mdp`, `permissions`) VALUES
-(38, 'Hamon', 'Emilien', 1, 'emilien.hamon@iia-formation.fr', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 0),
-(41, 'admin', 'admin', 645898458, 'admin@contact.fr', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 1);
 
 --
 -- Index pour les tables déchargées
@@ -89,7 +74,7 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`
