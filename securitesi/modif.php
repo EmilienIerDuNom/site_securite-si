@@ -77,4 +77,5 @@ require("config/config.php");
         }
     }
     ?>
+    <a href="index.php">Retour</a>
 </body>

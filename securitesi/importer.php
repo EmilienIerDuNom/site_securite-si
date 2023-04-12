@@ -67,5 +67,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
 ?>
+<a href="index.php">Retour</a>
 </body>
 </html>

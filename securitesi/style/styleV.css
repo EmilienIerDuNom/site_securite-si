@@ -1,0 +1,42 @@
+*{
+  margin : 10;
+  
+}
+
+img {
+  height: 500px;
+  width: 500px;
+}
+
+h1{
+    text-align: center;
+    color:rgb(0, 0, 0);
+  }
+  
+  body {
+      background: linear-gradient(45deg, #2915e45c, #3F5EFB);
+      padding: 100px 800px 10px;
+      font-family: 'Arial';
+      
+      }
+      
+
+      fieldset{
+          margin: 0 auto;
+          background: rgba(255, 255, 255, .3);
+          padding: 3rem;
+          border: 0;
+          border-radius: 20px;
+          box-shadow: 20px 20px 40px -6px rgba(68, 61, 61, 0.566);
+        
+        }
+  
+        a{
+          border: 0;
+          background: rgba(255, 255, 255, .3);
+          padding: 10px 5px;
+          border-radius: 30px;
+          cursor:pointer; 
+               }
+
+      
