@@ -8,7 +8,7 @@ require("config/config.php");
 <head>
     <meta charset="UTF-8">
     <title>Inscription</title>
-    <link rel="stylesheet" href="style.css" media="all" type="text/css">
+    <link rel="stylesheet" href="style/style.css" media="all" type="text/css">
 </head>
 
 <body>

@@ -10,12 +10,12 @@ $erreur = '';
 <head>
     <meta charset="UTF-8">
     <title>Connexion</title>
-    <link rel="stylesheet" href="style.css" media="all" type="text/css">
+    <link rel="stylesheet" href="style/style.css" media="all" type="text/css">
 </head>
 
 <body>
     <form action="" method="post">
-        <input type="mail" name="mail" placeholder="E-mail">
+        <input type="text" name="mail" placeholder="E-mail">
         <input type="password" name="mdp" placeholder="Mot de passe">
         <input type="submit" value="Entré">
         <?php 
@@ -27,7 +27,6 @@ echo $erreur;
 
     if (!empty($_POST['mail']) && !empty($_POST['mdp'])) // Si il existe les champs email, password et qu'il sont pas vident
     {
-        // Patch XSS
         $email = htmlspecialchars($_POST['mail']);
         $password = htmlspecialchars($_POST['mdp']);
 
@@ -48,6 +47,8 @@ echo $erreur;
                 // Si le mot de passe est le bon
                 if (hash( 'sha256', $password) === $data['mdp']) {
                     // On créer la session et on redirige sur index.php
+                    $_SESSION['mail'] = $email;
+                    $_SESSION['connecter']="connecter";
                     header('Location: index.php');
                 } else {
                     echo "E-mail ou mot de passe incorrect";

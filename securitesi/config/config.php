@@ -13,6 +13,6 @@ catch (Exception $e)
 {
 die('Erreur : ' . $e->getMessage());
 }
-
+session_start();
 
 ?>
