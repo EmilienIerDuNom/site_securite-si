@@ -9,7 +9,7 @@ h1{
 }
 
 body {
-    background: linear-gradient(40deg, #2915e45c, #3F5EFB);
+    background: linear-gradient(45deg, #2915e45c, #3F5EFB);
     height: 300vh;
     padding: 110px 800px 10px;
     font-family: 'Arial';
@@ -41,6 +41,7 @@ body {
 
       
       input{
+
         border: 0;
         background: rgba(255, 255, 255, .3);
         border-radius: 20px;
